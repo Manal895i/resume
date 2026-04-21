@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manali Patil - Professional Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --text-main: #0f172a;
+            --text-muted: #334155;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #ffffff;
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        .resume-container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            padding: 2rem 4rem;
+        }
+
+        /* Header with Photo Layout */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .header-info {
+            flex: 1;
+        }
+
+        .header-photo {
+            margin-left: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-pic {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 0.2rem;
+            letter-spacing: -0.5px;
+        }
+
+        .role-title {
+            color: var(--primary);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* Lists */
+        .modern-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .modern-list li {
+            position: relative;
+            padding-left: 1.2rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+        
+        .modern-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* Skills */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        .skill-badge {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            border: 1px solid #bae6fd;
+        }
+
+        /* Cards */
+        .info-card {
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-header {
+            color: var(--text-main);
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.2rem;
+        }
+
+        .card-subtitle {
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-meta {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-weight: 400;
+        }
+
+        /* Declaration */
+        .declaration {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            font-style: italic;
+        }
+
+        .signature-area {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4rem;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .sig-box {
+            text-align: center;
+        }
+
+        .sig-line {
+            width: 150px;
+            border-top: 1px solid var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .resume-container { padding: 1rem; }
+            header { flex-direction: column-reverse; text-align: center; gap: 2rem; }
+            .header-photo { margin-left: 0; }
+            .contact-info { justify-content: center; }
+            h1 { font-size: 2.2rem; }
+            .signature-area { flex-direction: column; gap: 3rem; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume-container">
+        <header>
+            <div class="header-info">
+                <h1>Manali Nemgonda Patil</h1>
+                <div class="role-title">Information Technology Student</div>
+                <div class="contact-info">
+                    <span>📧 patilmanali108@gmail.com</span>
+                    <span>📱 9545937626</span>
+                    <span>📍 Kolhapur, Maharashtra</span>
+                    <span><a href="#" target="_blank">🔗 LinkedIn</a></span>
+                </div>
+            </div>
+            <div class="header-photo">
+                <!-- Placeholder Image (You can replace src with your actual photo path like 'photo.jpg') -->
+                <img src="https://ui-avatars.com/api/?name=Manali+Patil&background=2563eb&color=fff&size=200&rounded=true&font-size=0.35" alt="Manali Patil" class="profile-pic" />
+            </div>
+        </header>
+
+        <section>
+            <h2>Professional Summary</h2>
+            <p>
+                Third-year Information Technology student with a strong foundation in computer systems and programming. 
+                Skills in HTML, CSS, JavaScript, C, C++, Java and basics of Python programming. Completed project in Web Development. 
+                Excited for an opportunity to gain hands-on experience and enhance the design and implementation of IT solutions.
+            </p>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="info-card">
+                <div class="card-header">
+                    BTech in Information Technology
+                    <div class="card-meta">Expected Graduation: 2027</div>
+                </div>
+                <div class="card-subtitle">Walchand Institute of Technology Solapur, Maharashtra</div>
+                <p><strong>Relevant Coursework:</strong> Computer network, Cyber laws basics, Microprocessor</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <span class="skill-badge">C & C++</span>
+                <span class="skill-badge">Java</span>
+                <span class="skill-badge">Python (Basics)</span>
+                <span class="skill-badge">HTML5 & CSS3</span>
+                <span class="skill-badge">JavaScript</span>
+                <span class="skill-badge">Bootstrap</span>
+                <span class="skill-badge">VS Code</span>
+                <span class="skill-badge">Spyder</span>
+                <span class="skill-badge">Turbo C</span>
+            </div>
+            <ul class="modern-list" style="margin-top: 1rem;">
+                <li><strong>Other Skills:</strong> Teamwork, Time Management, Strong Work Ethic</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            <div class="info-card">
+                <div class="card-header">
+                    Web Development (Student Internship)
+                    <div class="card-meta">June 2023</div>
+                </div>
+                <div class="card-subtitle">WOLFOX Company Pvt Ltd | Kolhapur, Maharashtra</div>
+                <ul class="modern-list">
+                    <li>Designed and developed highly responsive websites utilizing HTML, CSS, and JavaScript.</li>
+                    <li>Executed extensive cross-device testing to ensure seamless compatibility across various mobile screen sizes.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <div class="info-card">
+                <div class="card-header">
+                    Ayurvedic Hospital Website
+                    <div class="card-meta">HTML, CSS, JS, Bootstrap</div>
+                </div>
+                <p style="margin-bottom: 1rem;"><strong>Objective:</strong> Design and develop a user-friendly website for an Ayurvedic Hospital that provides information about treatments, services and appointment scheduling.</p>
+                
+                <div style="margin-bottom: 1rem;">
+                    <strong style="color: var(--text-main);">Key Features & Role:</strong>
+                    <ul class="modern-list">
+                        <li>Developed the front-end pages utilizing standard web technologies, ensuring a responsive layout and an intuitive navigation structure for both patients and doctors.</li>
+                        <li>Implemented a user-friendly homepage displaying comprehensive Ayurvedic treatment details.</li>
+                        <li>Built an online Appointment scheduling system and a contact page integrated with Google Maps.</li>
+                    </ul>
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <strong style="color: var(--text-main);">Challenges Overcome:</strong>
+                    <ul class="modern-list">
+                        <li>Ensured seamless mobile responsiveness across diverse screen sizes.</li>
+                        <li>Handled complex form validation logic and structured the appointment process.</li>
+                        <li>Successfully managed project timelines to deliver the final product within strict deadlines despite design iteration challenges.</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <strong style="color: var(--text-main);">Key Learnings:</strong>
+                    <ul class="modern-list">
+                        <li>Solidified front-end development capabilities and responsive web design paradigms.</li>
+                        <li>Enhanced ability to collaborate actively in a team environment under rigid deadlines while gaining significant practical skill enhancements.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Certifications & Publications</h2>
+            <ul class="modern-list">
+                <li><strong>Internship Certificate</strong> - Web Development, WOLFOX Company Pvt. Ltd | June 2023</li>
+                <li><strong>NPTEL Certificate</strong> - Soft Skill Development</li>
+                <li><strong>Simplilearn Certificate</strong> - Introduction to Cyber Security</li>
+                <li><strong>Infosys Course Certificate</strong> - Programming in Java</li>
+                <li><strong>Certificate of Publication</strong> - "Effects Covid-19’s on education and technology" - IRJMETS, Volume 05, Issue 11 (Nov 2023)</li>
+                <li><strong>Certificate of Publication</strong> - "Smart Campus System" - IJIRCCE, Volume 12, Issue 3 (March 2024)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Extracurricular Activities</h2>
+            <ul class="modern-list">
+                <li>Active Member of ISTE (Indian Society for Technical Education)</li>
+                <li>Active Member of CSI (Computer Society of India) Student Club</li>
+            </ul>
+        </section>
+
+        <section class="declaration">
+            <p>
+                I hereby declare that all the information provided above is correct and true to the best of my knowledge and experience.
+            </p>
+            <div class="signature-area">
+                <div class="sig-box">
+                    <div class="sig-line"></div>
+                    <div>Date</div>
+                </div>
+                <div class="sig-box">
+                    <div class="sig-line"></div>
+                    <div>Place: Kolhapur</div>
+                </div>
+                <div class="sig-box">
+                    <div class="sig-line"></div>
+                    <div>Manali Nemgonda Patil</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
